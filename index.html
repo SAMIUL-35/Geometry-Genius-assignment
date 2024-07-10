@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Geometry Genius</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		
+	<body>
+		<header class="m-12">
+			<div class="navbar bg-blue-100  flex  ">
+				<div class="md:flex-1 ">
+					<h1 class="normal-case text-3xl font-medium text-[#111111;] ">
+						<span class="text-5xl font-bold ">Interactive</span> <br />
+						Geometry Genius
+					</h1>
+				</div>
+				<div class="flex-none mt-12 md:mt-0">
+					<button id="blog-btn" class="btn bg- text-xl font-bold rounded-lg text-white bg-[#1090D8;]">Blog</button>
+				</div>
+			</div>
+		</header>
+        <main>
+            <section class=" flex flex-row lg:mx-12">
+              <div
+                class="card-details w-full md:w-[65%] lg:w-[65%] mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+              >
+                <!-- first card  -->
+                <div class="card  card-compact w-full bg-[#FBBCED] shadow-xl border-2" onmouseover="changeBackgroundColor(event)" onmouseout="restoreBackgroundColor(event)" >
+                  <figure>
+                    <img class="w-full h-40 m-12" src="./images/triangle.png" alt="triangle" />
+                  </figure>
+                  <div class="card-body mb-3">
+                    <h2 id="firstCardTitle" class="text-center text-2xl font-bold text-[#414141;]" >Triangle</h2>
+                    <p class="text-center mb-6 ">
+                        Area (A) = 0.5 x b x h
+                    </p>
+                    <div class="mb-12 mx-2 ">
+                        <input id="firstCardInput1" class="w-[30%] " type="text" placeholder="b" class="input input-bordered input-sm w-full max-w-xs pl-px " /><span >cm</span>
+                        <input id="firstCardInput2" class="w-[30%] px-2.5" type="text" placeholder="h" class="input input-bordered input-sm w-full pl-px max-w-xs " /><span>cm</span></div>
+                    <div class="">
+                      <button  class="btn btn-wide btn-lg btn-primary text-xl bg-[#1090D8;]" id="first-card">
+                        calculate
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- second card  -->
+                <div class="card card-compact w-full bg-[#FFFFFF] shadow-xl border-2" onmouseover="changeBackgroundColor(event)" onmouseout="restoreBackgroundColor(event)">
+                    <figure>
+                      <img class="w-full h-40  m-12" src="./images/rectangle.png" alt="rectangle" />
+                    </figure>
+                    <div class="card-body mb-3">
+                      <h2 id="secondCardTitle" class="text-center text-2xl font-bold text-[#414141;]" >Rectangle</h2>
+                      <p class="text-center mb-6 ">
+                          Area (A) =w x l
+                      </p>
+                      <div class="mb-12 mx-2">
+                          <input id="secondCardInput1" class="w-[30%] " type="text" placeholder="w" class="input input-bordered input-sm w-full max-w-xs bg-black " /><span >cm</span>
+                          <input id="secondCardInput2" class="w-[30%] px-2.5" type="text" placeholder="l" class="input input-bordered input-sm w-full max-w-xs bg-black-200" /><span>cm</span></div>
+                      <div class="">
+                        <button id="second-card" class="btn btn-wide btn-lg btn-primary text-xl bg-[#1090D8;]" >
+                          calculate
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- third card -->
+                  <div class="card card-compact w-full bg-[#FFFFFF;] shadow-xl border-2" onmouseover="changeBackgroundColor(event)" onmouseout="restoreBackgroundColor(event)">
+                    <figure>
+                      <img class="w-full h-40 m-12" src="./images/parallelogram.png" alt="parallelogram" />
+                    </figure>
+                    <div class="card-body mb-3">
+                      <h2 id="thirdCardTitle" class="text-center text-2xl font-bold text-[#414141;]" >Parallelogram</h2>
+                      <p class="text-center mb-6 ">
+                          Area (A) =b x h
+                      </p>
+                      <div class="mb-12 mx-2">
+                          <input id="thirdCardInput1" class="w-[30%] " type="text" placeholder="b" class="input input-bordered input-sm w-full max-w-xs bg-slate-500 " /><span >cm </span>
+                          <input id="thirdCardInput2" class="w-[30%] px-2.5" type="text" placeholder="h" class="input input-bordered input-sm w-full max-w-xs bg-slate-500" /><span>cm</span></div>
+                      <div class="">
+                        <button id="third-card" class="btn btn-wide btn-lg btn-primary text-xl bg-[#1090D8;]" >
+                          calculate
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- forth card -->
+                  <div class="card card-compact w-full bg-[#69C7F0;] shadow-xl border-2" onmouseover="changeBackgroundColor(event)" onmouseout="restoreBackgroundColor(event)">
+                    <figure>
+                      <img class="w-full h-40 m-12" src="./images/rhombus.png" alt="rhombus" />
+                    </figure>
+                    <div class="card-body mb-3">
+                      <h2 id="forthCardTitle" class="text-center text-2xl font-bold text-[#414141;]" >Rhombus</h2>
+                      <p class="text-center mb-6 ">
+                          Area (A) =0.5 x d <sub>1</sub> x d <sub>2</sub>
+                      </p>
+                      <div class="mb-12 mx-2">
+                          <input id="forthCardInput1" class="w-[30%] " type="text" placeholder="b" class="input input-bordered input-sm w-full max-w-xs bg-slate-500 " /><span >cm</span>
+                          <input id="forthCardInput2" class="w-[30%] px-2.5" type="text" placeholder="h" class="input input-bordered input-sm w-full max-w-xs bg-slate-500" /><span>cm</span></div>
+                      <div class="">
+                        <button id="forth-card" class="btn btn-wide btn-lg btn-primary text-xl bg-[#1090D8;]" >
+                          calculate
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- fifth card -->
+                  <div class="card card-compact w-full bg-[#FFFFFF;] shadow-xl border-2" onmouseover="changeBackgroundColor(event)" onmouseout="restoreBackgroundColor(event)">
+                    <figure>
+                      <img class="w-full h-40 m-12" src="./images/pentagon.png" alt="pentagon" />
+                    </figure>
+                    <div class="card-body mb-3">
+                      <h2 id="fifthCardTitle" class="text-center text-2xl font-bold text-[#414141;]" >Pentagon</h2>
+                      <p class="text-center mb-6 ">
+                          Area (A) =0.5 x p x b
+                      </p>
+                      <div class="mb-12 mx-2">
+                          <input  id="fifthCardInput1" class="w-[30%] " type="text" placeholder="p" class="input input-bordered input-sm w-full max-w-xs bg-slate-500 " /><span >cm</span>
+                          <input id="fifthCardInput2" class="w-[30%] px-2.5" type="text" placeholder="b" class="input input-bordered input-sm w-full max-w-xs bg-slate-500" /><span>cm</span></div>
+                      <div class="">
+                        <button id="fifth-card" class="btn btn-wide btn-lg btn-primary text-xl bg-[#1090D8;]" >
+                          calculate
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- last card -->
+                  <div class="card card-compact w-full bg-[#FFFFFF;] shadow-xl border-2" onmouseover="changeBackgroundColor(event)" onmouseout="restoreBackgroundColor(event)">
+                    <figure>
+                      <img class="w-full h-40 m-12" src="./images/ellipse.png" alt="ellipse" />
+                    </figure>
+                    <div class="card-body mb-3">
+                      <h2 id="lastCardTitle" class="text-center text-2xl font-bold text-[#414141;]" >Ellipse</h2>
+                      <p class="text-center mb-6 ">
+                          Area (A) = &#8719; ab
+                      </p>
+                      <div class="mb-12 mx-2">
+                          
+                          <input id="lastCardInput1" class="w-[30%] " type="text" placeholder="a" class="input input-bordered input-sm w-full max-w-xs bg-slate-500 " /><span >cm</span>
+                          <input id="lastCardInput2" class="w-[30%] px-2.5" type="text" placeholder="b" class="input input-bordered input-sm w-full max-w-xs bg-slate-500" /><span>cm</span></div>
+                      <div class="">
+                        <button  id="last-card" class="btn btn-wide btn-lg btn-primary text-xl bg-[#1090D8;]" >
+                          calculate
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+              </div>
+      
+              <!-- Area Calculation  div  -->
+              <div class="cart-details w-full md:w-[35%] lg:w-[35%] mx-auto">
+                <h1 class="text-xl text-center font-bold underline mt-12">
+                    Area Calculation 
+                </h1>
+                <div class="overflow-x-auto">
+                  <table class="table w-full">
+                    
+                    <tbody id="table-container">
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+          </main>
+          
+    <script src="./js/utilities.js"></script>
+		<script src="./js/index.js"></script>
+    
+	</body>
+</html>
+
+
+

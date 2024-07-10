@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-white">
+		<section class="w-full m-10  text-black ">
+			<header >
+				<h1 class="text-5xl font-bold underline text-center   p-3">
+					Document Object Model
+				</h1>
+			</header>
+			<main >
+				<article class="m-10 p-5" >
+					<h2 class="  my-3 text-3xl font-bold">1. What is DOM.Purpose of DOM?</h2>
+					<p class="  text-2xl" >
+						Ans. DOM stands for Document Object Model. DOM is a fundamental part
+						of modern web development, providing a standard way for developers to
+						access and manipulate the content, structure, and style of web pages.
+						Its purpose is to make it easier to create dynamic, interactive, and
+						accessible web applications that can be accessed by a wide range of
+						users on different platforms and devices.
+					</p>
+					<h2 class="my-3 text-3xl font-bold">
+						2. How will select HTML elements using DOM? Name the DOM methods?
+						
+					</h2>
+					<p class=" text-2xl">
+						Ans. To select HTML elements using DOM, there are several DOM methods:
+						<ul class="  text-2xl">
+							<li> 1.getElementById()</li>
+							<li>2. getElementsByClassName</li>
+							<li>3. getElementsByTagName()</li>
+							<li>4. querySelector</li>
+							<li>5. querySelectorAll()</li>
+						</ul>
+						
+					</p>
+					<h2 class="my-3 text-3xl font-bold">3.What is event bubble?.</h2>
+					<p class=" text-2xl ">
+						Ans. Event bubbling is a process in which an event that occurs on a particular element also triggers the same event on all its parent elements in the DOM hierarchy. This means that if attach an event handler to a child element, that event will also be triggered on its parent elements in sequence, until it reaches the topmost element, which is typically the document object. This can be useful for handling events on groups of elements. However, you can stop event bubbling at any point in the DOM tree using the event.stopPropagation() method.
+					</p>
+					<h2 class="my-3 text-3xl font-bold">4. What is a callback function and why will we use it? .</h2>
+					<p class=" text-2xl">
+						Ans. A callback function is a function that is passed as an argument to another function and is invoked by that function at a later point in time.  callback functions provide a powerful mechanism for controlling the flow of execution in a program, allowing functions to be executed in response to specific events or at specific times, and enabling the creation of highly dynamic and responsive applications.
+					</p>
+					
+				</article>
+			</main>
+		</section>
+	</body>
+</html>
